@@ -1,0 +1,9 @@
+<!-- Форма с использованием Bootstrap и ваших стилей -->
+<div class="container mt-5">
+    <form method="post" action="{% url 'main:checkout' %}" class="my-form">
+        {% csrf_token %}
+        {{ checkout_form.as_p }}
+
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>
